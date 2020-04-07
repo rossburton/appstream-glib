@@ -60,6 +60,15 @@ plugindir = join_paths(get_option('prefix'),
                        get_option('libdir'),
                        'asb-plugins-' + as_plugin_version)
 
+installed_tests_metadir = join_paths(get_option('prefix'),
+                                     get_option('datadir'),
+                                     'installed-tests',
+                                     meson.project_name())
+installed_tests_execdir = join_paths(get_option('prefix'),
+                                     get_option('libexecdir'),
+                                     'installed-tests',
+                                     meson.project_name())
+
 glib_ver = '>= 2.58.0'
 glib = dependency('glib-2.0', version : glib_ver)
 gmodule = dependency('gmodule-2.0', version : glib_ver)
