@@ -184,6 +184,8 @@ selftest = executable(
   c_args : cargs + ['-DTESTDIRSRC="@0@/../data/tests"'.format(meson.current_source_dir())]
                  + ['-DTESTDIRBUILD="@0@/../data/tests"'.format(meson.current_build_dir())],
   link_with : asglib,
+  install : get_option('installed_tests'),
+  install_dir : installed_tests_execdir
 )
 test('as-self-test', selftest)
 
