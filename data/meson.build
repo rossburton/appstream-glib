@@ -1,4 +1,6 @@
-subdir('installed-tests')
+if get_option('installed_tests')
+  subdir('installed-tests')
+endif
 subdir('tests')
 
 install_data('appdata-xml.m4', install_dir : 'share/aclocal')
