@@ -10,13 +10,13 @@ configure_file(
   output : 'appdata-validate.test',
   configuration : con2,
   install: true,
-  install_dir: join_paths('share', 'installed-tests', 'appstream-glib'),
+  install_dir: installed_tests_metadir),
 )
 configure_file(
   input : 'destdir-check.test.in',
   output : 'destdir-check.test',
   configuration : con2,
   install: true,
-  install_dir: join_paths('share', 'installed-tests', 'appstream-glib'),
+  install_dir: installed_tests_metadir),
 )
 
